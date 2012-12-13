@@ -1,0 +1,4 @@
+macmcscripter
+=============
+
+Mac MineCraft scripts
