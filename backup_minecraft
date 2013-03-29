@@ -1,0 +1,3 @@
+#!/bin/bash
+cd ~/Library/Application\ Support/minecraft/bin
+cp minecraft.jar minecraft-$1.jar
