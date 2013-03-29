@@ -1,0 +1,27 @@
+#!/bin/bash
+# WARNING: have a backup of your minecraft.jar at hand!
+# This script overwrites the minecraft.jar.
+
+rm -rf minecraft-tmp/*
+mkdir minecraft-tmp
+cd minecraft-tmp
+cp ~/Library/Application\ Support/minecraft/bin/minecraft.jar .
+
+unzip -d minecraft minecraft.jar
+rm -rf minecraft.jar
+
+# copy everything from Forge into minecraft
+unzip -d MinecraftForge $1
+cp -Rf MinecraftForge/ minecraft/
+rm -rf minecraft/META-INF
+
+# create new jar file
+cd minecraft
+zip -r ../minecraft.jar .
+cd ..
+
+# now the install...
+cp -f minecraft.jar ~/Library/Application\ Support/minecraft/bin/
+
+
+ 
