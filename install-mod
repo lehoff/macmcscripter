@@ -1,0 +1,5 @@
+#!/bin/bash
+
+MODS_DIR=~/Library/Application\ Support/minecraft/mods
+
+cp $1 $MODS_DIR/
